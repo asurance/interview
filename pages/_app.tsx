@@ -1,8 +1,18 @@
-import '../styles/globals.css'
-import type { AppProps } from 'next/app'
+import { AppProps } from 'next/app'
+import Head from 'next/head'
+import Layout from '../components/Layout'
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import '../global.css'
+
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Head>
+        <title>Asurance的面试工具箱</title>
+      </Head>
+      <Component {...pageProps} />
+    </Layout>
+  )
 }
 
-export default MyApp
+export default App

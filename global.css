@@ -1,0 +1,29 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+section.layout {
+  min-height: 100vh;
+  display: flex;
+}
+
+section.layout > .sider {
+  flex: 0 0 16em;
+  border-right: 2px solid #eee;
+}
+
+section.layout > .sider .menu {
+  padding-left: 2em;
+  margin: 0.5em 0;
+}
+
+section.layout > main {
+  flex: 1 1 auto;
+}
+
+article {
+  flex: 1 1 auto;
+  margin: 0 4em;
+}
