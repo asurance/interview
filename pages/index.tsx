@@ -119,6 +119,63 @@ const Index: NextPage = () => {
             </li>
           </ol>
         </Article>
+        <Article title="css选择器优先级">
+          important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt;
+          伪对象 &gt; 继承 &gt; 通配符
+        </Article>
+        <Article title="单点登录(SSO)">
+          <ol>
+            <li>
+              <header className="text-xl">同域名共享cookie</header>
+              <p>
+                如果所有平台在同一个顶级域名下，可以将cookie存在顶级域名使得其在子域名共享
+              </p>
+            </li>
+            <li>
+              <header className="text-xl">SSO认证授权</header>
+              <p>
+                首先用户登录子平台，被重定向到认证中心(附带子平台的地址信息)。{' '}
+                <br />
+                如果未登录，则正常进行登录，如果登录过，则自动登录。 <br />
+                总之最后会被重定向回子平台(附带生成的token信息)。 <br />
+                此时子平台只需要通过请求向认证中心验证token就能正常登入了。
+              </p>
+            </li>
+          </ol>
+        </Article>
+        <Article title="box-sizing属性">
+          <ol>
+            <li>
+              <header className="text-xl">content-box</header>
+              <p>width/height指content部分的宽高</p>
+            </li>
+            <li>
+              <header className="text-xl">border-box</header>
+              <p>width/height指border + padding + content部分的宽高</p>
+            </li>
+          </ol>
+        </Article>
+        <Article title="BFC">
+          <section>
+            <header className="text-xl">触发方式</header>
+            <ul>
+              <li>html元素</li>
+              <li>float元素(float不为none)</li>
+              <li>绝对定位元素(position为absolute/fixed)</li>
+              <li>display为inline-block/table-cells/flow-root</li>
+              <li>display为flex/grid的直接子元素</li>
+              <li>overflow为hidden/auto/scroll</li>
+            </ul>
+          </section>
+          <section>
+            <header className="text-xl">解决问题</header>
+            <ul>
+              <li>同一BFC下margin折叠问题</li>
+              <li>防止浮动导致高度塌陷</li>
+              <li>防止浮动区域和其他区域重叠</li>
+            </ul>
+          </section>
+        </Article>
       </main>
     </div>
   )
