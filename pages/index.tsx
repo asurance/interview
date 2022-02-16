@@ -60,7 +60,15 @@ const Index: NextPage = () => {
             </li>
             <li>
               <header className="text-xl">3xx</header>
-              <p>重定向(304和缓存相关)</p>
+              <p>
+                重定向
+                <br />
+                301/308:永久重定向
+                <br />
+                302/307:临时重定向
+                <br />
+                304:缓存命中
+              </p>
             </li>
             <li>
               <header className="text-xl">4xx</header>
@@ -175,6 +183,33 @@ const Index: NextPage = () => {
               <li>防止浮动区域和其他区域重叠</li>
             </ul>
           </section>
+        </Article>
+        <Article title="小图优化">
+          <ul>
+            <li>使用图标字体(icon font)</li>
+            <li>使用svg标签</li>
+            <li>DataUrl(base64等格式)</li>
+          </ul>
+        </Article>
+        <Article title="JS判断obj是不是数组">
+          <ul>
+            <li>Array.isArray(obj)</li>
+            <li>obj instanceof Array</li>
+            <li>obj.__proto__.constructor === Array</li>
+            <li>
+              Object.prototype.toString.call(obj) === &quot[object Array]&quot
+            </li>
+          </ul>
+        </Article>
+        <Article title="进程和线程的区别">
+          <ul>
+            <li>进程是资源分配最小的单位,线程是程序执行的最小单位.</li>
+            <li>进程有独立的地址空间,线程会共享地址空间.</li>
+            <li>线程创建,切换,占用资源开销小. 进程间通信不便,线程通信方便.</li>
+            <li>
+              进程挂掉不影响其他进程,但线程挂掉会导致整个进程挂掉(线程死循环不会影响其他线程)
+            </li>
+          </ul>
         </Article>
       </main>
     </div>
