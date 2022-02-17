@@ -127,9 +127,18 @@ const Index: NextPage = () => {
             </li>
           </ol>
         </Article>
-        <Article title="css选择器优先级">
-          important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt;
-          伪对象 &gt; 继承 &gt; 通配符
+        <Article title="css选择器">
+          <p>
+            important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt;
+            伪对象 &gt; 继承 &gt; 通配符
+          </p>
+          <p>伪类：使用:符号,获取dom树中不存在的信息</p>
+          <p>伪元素：使用::符号,在dom中创建抽象元素</p>
+          <p>a,b: a标签和b标签</p>
+          <p>a b: 父元素或祖父元素为a标签的b标签</p>
+          <p>a&gtb: 父元素为a标签的b标签</p>
+          <p>a+b: a标签后的第一个b标签</p>
+          <p>a~b: a标签后的任意一个兄弟b标签</p>
         </Article>
         <Article title="单点登录(SSO)">
           <ol>
@@ -209,6 +218,13 @@ const Index: NextPage = () => {
             <li>
               进程挂掉不影响其他进程,但线程挂掉会导致整个进程挂掉(线程死循环不会影响其他线程)
             </li>
+          </ul>
+        </Article>
+        <Article title="跨域">
+          <ul>
+            <li>jsonp</li>
+            <li>cors allow-cross-origin</li>
+            <li>proxy</li>
           </ul>
         </Article>
       </main>
