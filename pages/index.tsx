@@ -127,18 +127,29 @@ const Index: NextPage = () => {
             </li>
           </ol>
         </Article>
-        <Article title="css选择器">
-          <p>
-            important &gt; 内联 &gt; ID &gt; 类 &gt; 标签 | 伪类 | 属性选择 &gt;
-            伪对象 &gt; 继承 &gt; 通配符
-          </p>
-          <p>伪类：使用:符号,获取dom树中不存在的信息</p>
-          <p>伪元素：使用::符号,在dom中创建抽象元素</p>
-          <p>a,b: a标签和b标签</p>
-          <p>a b: 父元素或祖父元素为a标签的b标签</p>
-          <p>a&gtb: 父元素为a标签的b标签</p>
-          <p>a+b: a标签后的第一个b标签</p>
-          <p>a~b: a标签后的任意一个兄弟b标签</p>
+        <Article title="css选择器优先级">
+          <ol>
+            <li>important</li>
+            <li>内联</li>
+            <li>ID</li>
+            <li>类 | 伪类 | 属性选择</li>
+            <li>标签 | 伪对象</li>
+          </ol>
+        </Article>
+        <Article title="伪类和伪元素的区别">
+          <ul>
+            <li>伪类：使用:符号,获取dom树中不存在的信息</li>
+            <li>伪元素：使用::符号,在dom中创建抽象元素</li>
+          </ul>
+        </Article>
+        <Article title="css关系选择器">
+          <ul>
+            <li>a,b: a标签和b标签</li>
+            <li>a b: 父元素或祖父元素为a标签的b标签</li>
+            <li>a&gt;b: 父元素为a标签的b标签</li>
+            <li>a+b: a标签后的第一个b标签</li>
+            <li>a~b: a标签后的任意一个兄弟b标签</li>
+          </ul>
         </Article>
         <Article title="单点登录(SSO)">
           <ol>
@@ -225,6 +236,49 @@ const Index: NextPage = () => {
             <li>jsonp</li>
             <li>cors allow-cross-origin</li>
             <li>proxy</li>
+          </ul>
+        </Article>
+        <Article title="算法题思路">
+          <ul>
+            <li>排序:位置信息无效的数组</li>
+            <li>前缀和:快速求解区间和</li>
+            <li>差分数组:快速进行区间加减</li>
+            <li>拓扑排序:有向图中查找环</li>
+          </ul>
+        </Article>
+        <Article title="图片懒加载">
+          <ul>
+            <li>
+              <header>data-src属性存url + 视口计算</header>
+              <ul>
+                <li>
+                  <header>onscroll + 位置信息</header>
+                  <p> offsetTop + clientHeight &lt; scrollTop </p>
+                </li>
+                <li>
+                  <header>onscroll + getBoundingClientRect</header>
+                </li>
+                <li>
+                  <header>IntersectionObserve</header>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <header>loading属性(存在兼容性问题)</header>
+              <p>{`例子:<img src="image.jpg" alt="..." loading="lazy">`}</p>
+            </li>
+          </ul>
+        </Article>
+        <Article title="防抖和节流">
+          <ul>
+            <li>
+              <header>防抖</header>
+              <p>多次调用只有最后一次生效,目的是消除无效调用</p>
+            </li>
+            <li>
+              <header>节流</header>
+              <p>多次调用会过滤部分调用,目的是减小运算开销</p>
+            </li>
           </ul>
         </Article>
       </main>
