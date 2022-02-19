@@ -253,13 +253,21 @@ const Index: NextPage = () => {
               <ul>
                 <li>
                   <header>onscroll + 位置信息</header>
-                  <p> offsetTop + clientHeight &lt; scrollTop </p>
+                  <p>
+                    img.offsetTop &lt; window.innerHeight +
+                    document.documentElement.scrollTop
+                  </p>
                 </li>
                 <li>
                   <header>onscroll + getBoundingClientRect</header>
+                  <p>
+                    img.getBoundingClientRect().top &lt;
+                    documentElement.clientHeight
+                  </p>
                 </li>
                 <li>
-                  <header>IntersectionObserve</header>
+                  <header>IntersectionObserver</header>
+                  <p>entry.intersectionRatio &gt; 0</p>
                 </li>
               </ul>
             </li>
@@ -278,6 +286,62 @@ const Index: NextPage = () => {
             <li>
               <header>节流</header>
               <p>多次调用会过滤部分调用,目的是减小运算开销</p>
+            </li>
+          </ul>
+        </Article>
+        <Article title="Http2.0">
+          <ul>
+            <li>header压缩</li>
+            <li>多路复用</li>
+            <li>Server Push</li>
+            <li>二进制分帧</li>
+          </ul>
+        </Article>
+        <Article title="client,offset和scroll">
+          <ul>
+            <li>
+              <header>client</header>
+              <p>元素本身可视内容,不含overflow部分,滚动条,border,包含padding</p>
+              <ul>
+                <li>clientHeight:对象可见高度</li>
+                <li>clientWidth:对象可见宽度</li>
+                <li>clientTop:元素距离顶部距离</li>
+                <li>clientLeft:元素距离左侧的距离</li>
+              </ul>
+            </li>
+            <li>
+              <header>offset</header>
+              <p>
+                偏移，包含所有显示宽度,包括滚动条,padding,border,但不包括overflow部分
+              </p>
+              <ul>
+                <li>
+                  offsetHeight = border-width * 2 + padding-top + height +
+                  padding-bottom
+                </li>
+                <li>
+                  offsetWidth = border-width * 2 + padding-left + width +
+                  padding-right
+                </li>
+                <li>
+                  offsetParent:
+                  向上查找position为absolute/relative的第一个节点,没有为body
+                </li>
+                <li>offsetTop: 相对offsetParent属性中顶部距离</li>
+                <li>offsetLeft: 相对offsetParent属性中左部距离</li>
+              </ul>
+            </li>
+            <li>
+              <header>scroll</header>
+              <p>
+                滚动，包含元素实际高度，包括overflow部分但不包括padding和border
+              </p>
+              <ul>
+                <li>scrollHeight: 对象的滚动高度</li>
+                <li>scrollWidth: 对象的滚动高度</li>
+                <li>scrollTop: 对象的纵向滚动距离</li>
+                <li>scrollLeft: 对象的横向滚动距离</li>
+              </ul>
             </li>
           </ul>
         </Article>
