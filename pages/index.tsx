@@ -15,36 +15,35 @@ const Index: NextPage = () => {
             <li>
               <header className="text-xl">挂载时:</header>
               <p>
-                {
-                  'constructor -> getDerivedStateFromProps -> render -> update DOM tree -> componentDidMount'
-                }
+                constructor -&gt; getDerivedStateFromProps -&gt; render -&gt;
+                update DOM tree -&gt; componentDidMount
               </p>
             </li>
             <li>
               <header className="text-xl">更新时</header>
               <p>
-                {
-                  'new props -> getDerivedStateFromProps -> shouldComponentUpdate -> render -> update DOM tree -> getSnapshotBeforeUpdate -> componetDidUpdate'
-                }
+                new props -&gt; getDerivedStateFromProps -&gt;
+                shouldComponentUpdate -&gt; render -&gt; update DOM tree -&gt;
+                getSnapshotBeforeUpdate -&gt; componetDidUpdate
               </p>
               <p>
-                {
-                  'setState -> getDerivedStateFromProps -> shouldComponentUpdate -> render -> update DOM tree -> getSnapshotBeforeUpdate -> componetDidUpdate'
-                }
+                setState -&gt; getDerivedStateFromProps -&gt;
+                shouldComponentUpdate -&gt; render -&gt; update DOM tree -&gt;
+                getSnapshotBeforeUpdate -&gt; componetDidUpdate
               </p>
               <p>
-                {
-                  'forceUpdate -> getDerivedStateFromProps -> render -> update DOM tree -> getSnapshotBeforeUpdate -> componetDidUpdate'
-                }
+                forceUpdate -&gt; getDerivedStateFromProps -&gt; render -&gt;
+                update DOM tree -&gt; getSnapshotBeforeUpdate -&gt;
+                componetDidUpdate
               </p>
             </li>
             <li>
               <header className="text-xl">卸载时:</header>
-              <p>{'componetWilUnmount'}</p>
+              <p>componetWilUnmount</p>
             </li>
             <li>
               <header className="text-xl">错误时:</header>
-              <p>{'componentDidCatch -> setState正常流程'}</p>
+              <p>componentDidCatch -&gt; setState正常流程</p>
             </li>
           </ol>
         </Article>
@@ -162,7 +161,7 @@ const Index: NextPage = () => {
             <li>
               <header className="text-xl">SSO认证授权</header>
               <p>
-                首先用户登录子平台，被重定向到认证中心(附带子平台的地址信息)。{' '}
+                首先用户登录子平台，被重定向到认证中心(附带子平台的地址信息)。
                 <br />
                 如果未登录，则正常进行登录，如果登录过，则自动登录。 <br />
                 总之最后会被重定向回子平台(附带生成的token信息)。 <br />
@@ -273,7 +272,10 @@ const Index: NextPage = () => {
             </li>
             <li>
               <header>loading属性(存在兼容性问题)</header>
-              <p>{`例子:<img src="image.jpg" alt="..." loading="lazy">`}</p>
+              <p>
+                例子:&lt;img src=&quot;image.jpg&quot; alt=&quot;...&quot;
+                loading=&quot;lazy&quot;&gt;
+              </p>
             </li>
           </ul>
         </Article>
@@ -343,6 +345,47 @@ const Index: NextPage = () => {
                 <li>scrollLeft: 对象的横向滚动距离</li>
               </ul>
             </li>
+          </ul>
+        </Article>
+        <Article title="面试提问">
+          <ul>
+            <li>工作中需要使用到的技术栈</li>
+            <li>工作节奏怎么样,是否有时间进行技术沉淀</li>
+            <li>对开源的态度</li>
+            <li>对简历的看法</li>
+          </ul>
+        </Article>
+        <Article title="http请求取消">
+          <ul>
+            <li>xhr: request.abort()</li>
+            <li>fetch: abortcontroller.signal/abort()</li>
+            <li>axios: canceltoken.source()/cancel()</li>
+          </ul>
+        </Article>
+        <Article title="CSRF攻击">
+          <ol>
+            <li>用户登录网站A,本地存储cookie</li>
+            <li>用户登录诱导网站B,隐式发送请求给A,其中会附带cookie</li>
+          </ol>
+        </Article>
+        <Article title="下载json数据">
+          <ol>
+            <li>新建a标签并模拟点击</li>
+            <li>
+              <ul>
+                <li>将json转为data url</li>
+                <li>将json转为blob并用createObjectURL创建url</li>
+              </ul>
+            </li>
+          </ol>
+        </Article>
+        <Article title="data url">
+          <p>data:[&lt;mediatype&gt;][;base64],&lt;data&gt;</p>
+        </Article>
+        <Article title="encodeuri和encodeuricomponent">
+          <ul>
+            <li>encodeuri: 设计上对整个url编码</li>
+            <li>encodeuricomponent: 设计上对url中search部分[key,value]编码</li>
           </ul>
         </Article>
       </main>
