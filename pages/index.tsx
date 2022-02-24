@@ -388,6 +388,20 @@ const Index: NextPage = () => {
             <li>encodeuricomponent: 设计上对url中search部分[key,value]编码</li>
           </ul>
         </Article>
+        <Article title="css一行超出显示省略号">
+          <ul>
+            <li>overflow: hidden;</li>
+            <li>text-overflow: ellipsis;</li>
+            <li>white-space: nowrap;</li>
+          </ul>
+        </Article>
+        <Article title="css隐藏页面中元素">
+          <ul>
+            <li>display: none</li>
+            <li>opacity: 0</li>
+            <li>visibility: hidden</li>
+          </ul>
+        </Article>
       </main>
     </div>
   )
