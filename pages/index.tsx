@@ -347,14 +347,6 @@ const Index: NextPage = () => {
             </li>
           </ul>
         </Article>
-        <Article title="面试提问">
-          <ul>
-            <li>工作中需要使用到的技术栈</li>
-            <li>工作节奏怎么样,是否有时间进行技术沉淀</li>
-            <li>对开源的态度</li>
-            <li>对简历的看法</li>
-          </ul>
-        </Article>
         <Article title="http请求取消">
           <ul>
             <li>xhr: request.abort()</li>
