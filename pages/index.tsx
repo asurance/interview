@@ -23,17 +23,17 @@ const Index: NextPage = () => {
               <header className="text-xl">更新时</header>
               <p>
                 new props -&gt; getDerivedStateFromProps -&gt;
-                shouldComponentUpdate -&gt; render -&gt; update DOM tree -&gt;
-                getSnapshotBeforeUpdate -&gt; componetDidUpdate
+                shouldComponentUpdate -&gt; render -&gt; getSnapshotBeforeUpdate
+                -&gt; update DOM tree -&gt; componetDidUpdate
               </p>
               <p>
                 setState -&gt; getDerivedStateFromProps -&gt;
-                shouldComponentUpdate -&gt; render -&gt; update DOM tree -&gt;
-                getSnapshotBeforeUpdate -&gt; componetDidUpdate
+                shouldComponentUpdate -&gt; render -&gt;getSnapshotBeforeUpdate
+                -&gt; update DOM tree -&gt; componetDidUpdate
               </p>
               <p>
                 forceUpdate -&gt; getDerivedStateFromProps -&gt; render -&gt;
-                update DOM tree -&gt; getSnapshotBeforeUpdate -&gt;
+                getSnapshotBeforeUpdate -&gt; update DOM tree -&gt;
                 componetDidUpdate
               </p>
             </li>
@@ -216,7 +216,7 @@ const Index: NextPage = () => {
             <li>obj instanceof Array</li>
             <li>obj.__proto__.constructor === Array</li>
             <li>
-              Object.prototype.toString.call(obj) === &quot[object Array]&quot
+              Object.prototype.toString.call(obj) === &quot;[object Array]&quot;
             </li>
           </ul>
         </Article>
